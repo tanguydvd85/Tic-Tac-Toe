@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="668.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fr.tanguydvd.tictactoe.controller.MainController">
+   <children>
+      <GridPane fx:id="gridPane" layoutX="203.0" layoutY="85.0" prefHeight="234.0" prefWidth="262.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button fx:id="button1" mnemonicParsing="false" onAction="#setUpButton" prefHeight="141.0" prefWidth="173.0">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="button2" mnemonicParsing="false" onAction="#setUpButton" prefHeight="153.0" prefWidth="87.0" GridPane.columnIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="button3" mnemonicParsing="false" onAction="#setUpButton" prefHeight="141.0" prefWidth="160.0" GridPane.columnIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="button4" mnemonicParsing="false" onAction="#setUpButton" prefHeight="122.0" prefWidth="208.0" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="button5" mnemonicParsing="false" onAction="#setUpButton" prefHeight="106.0" prefWidth="148.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="button6" mnemonicParsing="false" onAction="#setUpButton" prefHeight="93.0" prefWidth="127.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="button7" mnemonicParsing="false" onAction="#setUpButton" prefHeight="115.0" prefWidth="207.0" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="button8" mnemonicParsing="false" onAction="#setUpButton" prefHeight="98.0" prefWidth="189.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+            <Button fx:id="button9" mnemonicParsing="false" onAction="#setUpButton" prefHeight="135.0" prefWidth="230.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+               <font>
+                  <Font size="24.0" />
+               </font></Button>
+         </children>
+      </GridPane>
+      <Label layoutX="265.0" layoutY="43.0" text="Tic-Tac-Toe">
+         <font>
+            <Font name="System Bold" size="25.0" />
+         </font>
+      </Label>
+      <MenuBar prefHeight="25.0" prefWidth="668.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Options">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#openGamesRules" text="Règles du Jeu" />
+                  <MenuItem mnemonicParsing="false" onAction="#quitLauncher" text="Quitter" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Jeu">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#reset" text="Recommencer" />
+                  <MenuItem mnemonicParsing="false" onAction="#replay" text="Nouvelle manche" />
+                  <MenuItem mnemonicParsing="false" onAction="#createNewGame" text="Nouvelle partie" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+      <RadioButton fx:id="gameModeFriends" layoutX="14.0" layoutY="75.0" mnemonicParsing="false" onAction="#selectGameModeFriends" text="Jouer entre amis">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <Label layoutX="14.0" layoutY="99.0" text="Joueur 1" />
+      <TextField fx:id="playerOneTextField" layoutX="14.0" layoutY="117.0" promptText="Nom du joueur 1" />
+      <Label layoutX="14.0" layoutY="148.0" text="Joueur 2" />
+      <TextField fx:id="playerTwoTextField" layoutX="14.0" layoutY="166.0" promptText="Nom du joueur 2" />
+      <CheckBox fx:id="randomSelectionChecked" layoutX="44.0" layoutY="201.0" mnemonicParsing="false" text="Séléction aléatoire">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </CheckBox>
+      <Label layoutX="16.0" layoutY="268.0" text="Joueur" />
+      <TextField fx:id="playerOne" layoutX="16.0" layoutY="289.0" promptText="Nom du joueur " />
+      <Button fx:id="startGameBtn" layoutX="55.0" layoutY="330.0" mnemonicParsing="false" onAction="#startGame" prefHeight="25.0" prefWidth="68.0" text="Jouer" />
+      <Button fx:id="resetBtn" layoutX="184.0" layoutY="354.0" mnemonicParsing="false" onAction="#reset" text="Recommencer" />
+      <Button fx:id="newGameBtn" layoutX="392.0" layoutY="354.0" mnemonicParsing="false" onAction="#createNewGame" text="Nouvelle partie" />
+      <Button fx:id="replayBtn" layoutX="286.0" layoutY="354.0" mnemonicParsing="false" onAction="#replay" prefHeight="25.0" prefWidth="97.0" text="Rejouer" />
+      <Label layoutX="502.0" layoutY="137.0" text="Tableau des scores">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="playerTwoLabel" layoutX="502.0" layoutY="235.0" prefHeight="17.0" prefWidth="100.0" text="Joueur 2" />
+      <Label fx:id="playerOneLabel" layoutX="502.0" layoutY="185.0" prefHeight="17.0" prefWidth="100.0" text="Joueur 1" />
+      <Label fx:id="playerOneScore" alignment="CENTER_RIGHT" layoutX="611.0" layoutY="185.0" prefHeight="17.0" prefWidth="28.0" text="0" />
+      <Label fx:id="playerTwoScore" alignment="CENTER_RIGHT" layoutX="611.0" layoutY="235.0" prefHeight="17.0" prefWidth="28.0" text="0" />
+      <RadioButton fx:id="gameModeIA" layoutX="16.0" layoutY="244.0" mnemonicParsing="false" onAction="#selectGameModeIA" text="Jouer contre l'ordinateur">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </RadioButton>
+      <Label fx:id="informationLabel" alignment="CENTER" layoutX="203.0" layoutY="329.0" prefHeight="17.0" prefWidth="262.0" text="Bonne chance !" textFill="RED" />
+   </children>
+</AnchorPane>
